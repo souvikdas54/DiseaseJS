@@ -1,0 +1,49 @@
+<div class="quiz-area" ng-show="inProgress">
+	<div ng-show="!quizOver">
+		<h2 id="question">{{question}}</h2>
+		<ul id="options">
+			<li ng-repeat="option in options">
+				<label>
+					<input type="radio" name="answer" value="{{option}}">
+					{{option}}
+				</label>
+			</li>
+		</ul>
+		<button ng-click="checkAnswer()" ng-show="answerMode">Submit</button>
+
+		<div ng-show="!answerMode">
+			<button ng-click="nextQuestion()" class="next-question">Next</button>
+			<span ng-show="correctAns">Move on to the next question.</span>
+			<span ng-show="!correctAns">Great!Move on to the next question.</span>
+		</div>
+	</div>
+
+	<div ng-show="quizOver">
+		<h2>Analysis is complete {{array}}</h2>
+		<div ng-show="score==0">
+		No disease detected
+		</div>
+		<div ng-show="score==1">
+		You probably have flu
+		</div>
+		<div ng-show="score==2">
+		You probably have common cold
+		</div>
+		<div ng-show="score==3">
+		You probably have chicken pox
+		</div>	
+		<div ng-show="score==4">
+		You probably have measles
+		</div>
+		<div ng-show="score==5">
+		You probably have mumps
+		</div>
+		<button ng-click="reset()">Use again</button>
+	</div>
+
+</div>
+
+<div class="intro" ng-show="!inProgress">
+	<p>Welcome to the Disease Analyzer App</p>
+	<button id="startQuiz" ng-click="start()">Start your diagnosis</button>
+</div>

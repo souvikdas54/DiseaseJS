@@ -1,0 +1,65 @@
+body {
+	margin: 0 auto;
+	text-align: center;
+	font-family: Lucida Console, Courier, monospace;;
+}
+
+h1{
+	font-size: 45px;
+}
+h2 {
+	font-weight: normal;
+	font-size: 40px;
+	background: #ccc
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	list-style: none;
+}
+
+button {
+	position: relative;
+	cursor: pointer;
+	font-size: 20px;
+}
+
+
+.container {
+	width:580px;
+	text-align: left;
+    margin:auto;
+    background-color: #66CCFF;
+    border:4px
+    solid #B0E0E6;
+    border-radius:5px;
+    box-shadow: 5px 5px 5px #888;
+}
+
+#options {
+	margin: auto;
+	background: #F6B79F;
+	font-size: 35px;
+}
+#options:hover {
+	margin: auto;
+	background: #FBC366;
+	font-size: 35px;
+}
+
+.next-question,.intro {
+	margin-right: 40px;
+	font-size: 20px;
+}
+#score {
+	margin-top: 10px;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+
+
