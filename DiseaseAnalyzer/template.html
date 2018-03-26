@@ -10,6 +10,7 @@
 			</li>
 		</ul>
 		<button ng-click="checkAnswer()" ng-show="answerMode">Submit</button>
+		
 
 		<div ng-show="!answerMode">
 			<button ng-click="nextQuestion()" class="next-question">Next</button>
@@ -38,7 +39,7 @@
 		<div ng-show="score==5">
 		You probably have mumps
 		</div>
-		<button ng-click="reset()">Use again</button>
+		<button onclick="return2()">Use again</button>
 	</div>
 
 </div>

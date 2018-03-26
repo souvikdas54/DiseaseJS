@@ -43,29 +43,8 @@ app.directive('quiz', function(quizFactory) {
 					scope.array.push(0)
 					scope.correctAns = false;
 				}
-					if(scope.id==0)
-					{
-						//scope.score+=10;
-					}
-					else if(scope.id==1)
-					{
-						//scope.score+=7;
-					}
-					else if(scope.id==2)
-					{
-						//scope.score+=12;
-					}
-					else if(scope.id==3)
-					{
-						//scope.score+=2;
-					}
-					else if(scope.id==4)
-					{
-						//scope.score+=1;
-					}
-					else {
-					//scope.score+=49;
-					var array2 = [0.4,0.35,0.2,0.5,0.3,0.6];
+					
+					/*var array2 = [0.4,0.35,0.2,0.5,0.3,0.6];
 					for(var i=0;i<6;i++)
 					{
 						scope.array[i]=scope.array[i]*array2[i];
@@ -94,15 +73,20 @@ app.directive('quiz', function(quizFactory) {
 					}
 					else{
 						scope.score=0;
-					}
+					}*/
 
-				}
+				
 				scope.answerMode = false;
 			};
 
 			scope.nextQuestion = function() {
 				scope.id++;
-				scope.getQuestion();
+				if(scope.id==14)
+				{
+					JSON.stringify(scope.array);
+					window.location.href = "diseaseanalyzer.php?hagu="+scope.array;
+				}
+					scope.getQuestion();
 			}
 			
 			scope.reset();
@@ -118,12 +102,22 @@ app.factory('quizFactory', function() {
 			answer: 0
 		},
 		{
-			question: "Do you have rash?",
+			question: "Do you have runny nose?",
 			options: ["Yes", "No"],
 			answer: 0
 		},
 		{
-			question: "Do you have body ache?",
+			question: "Do you have skin rash?",
+			options: ["Yes", "No"],
+			answer: 0
+		},
+		{
+			question: "Do you have cough?",
+			options: ["Yes", "No"],
+			answer: 0
+		},
+		{
+			question: "Do you have loss of appetite?",
 			options: ["Yes", "No"],
 			answer: 0
 		},
@@ -133,14 +127,74 @@ app.factory('quizFactory', function() {
 			answer: 0
 		},
 		{
+			question: "Do you have fatigue?",
+			options: ["Yes", "No"],
+			answer: 0
+		},
+		{
 			question: "Do you have headache?",
 			options: ["Yes", "No"],
 			answer: 0
 		},
-		{	
-			question: "Do you have swollen glands?",
+		{
+			question: "Do you have bodyache?",
 			options: ["Yes", "No"],
 			answer: 0
+		},
+		{
+			question: "Do you have watery eyes?",
+			options: ["Yes", "No"],
+			answer: 0
+		},
+		{	
+			question: "Do you have dehydration?",
+			options: ["Yes", "No"],
+			answer: 0
+		},
+		{	
+			question: "Do you have blisters?",
+			options: ["Yes", "No"],
+			answer: 0
+		},
+		{	
+			question: "Do you have difficulty in swallowing?",
+			options: ["Yes", "No"],
+			answer: 0
+		},
+		{	
+			question: "Do you have nasal congestion?",
+			options: ["Yes", "No"],
+			answer: 0
+		},
+		{	
+			question: "Do you have bloating?",
+			options: ["Yes", "No"],
+			answer: 0
+		},
+		{	
+			question: "Do you have abdominal pain?",
+			options: ["Yes", "No"],
+			answer: 0
+		},
+		{	
+			question: "Do you have shortness of breath?",
+			options: ["Yes", "No"],
+			answer: 0
+		},
+		{	
+			question: "Do you have voice crack?",
+			options: ["Yes", "No"],
+			answer: 0
+		},
+		{	
+			question: "Do you have fast heart rate?",
+			options: ["Yes", "No"],
+			answer: 0
+		},
+		{	
+			question: "Do you have sore throat?",
+			options: ["Yes", "No"],
+			//answer: 0
 		}
 	];
 
